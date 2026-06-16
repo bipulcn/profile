@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Details | Bipul Chandra Dev Nath Portfolio</title>
+    <meta name="description" content="Technical specifications, architecture details, and client project portfolios for Bipul Chandra Dev Nath.">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        primary: '#2563eb', // Blue accent
+                        graytext: '#64748b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans selection:bg-primary selection:text-white pt-24">
+
+    <!-- Header Navigation -->
+    <header class="fixed w-full top-0 bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-dark tracking-tighter">
+                <a href="index.html">BIPUL<span class="text-primary">.</span></a>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-graytext">
+                <a href="index.html#home" class="hover:text-primary transition">Home</a>
+                <a href="index.html#about" class="hover:text-primary transition">About</a>
+                <a href="index.html#services" class="hover:text-primary transition">Expertise</a>
+                <a href="index.html#experience" class="hover:text-primary transition">Experience</a>
+                <a href="index.html#portfolio" class="text-primary transition font-bold">Projects</a>
+                <a href="index.html#academic" class="hover:text-primary transition">Publications & Education</a>
+                <a href="index.html#courses" class="hover:text-primary transition">Courses</a>
+                <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+                <a href="cv.html" class="hover:text-primary transition font-semibold text-primary">Resume/CV</a>
+            </nav>
+            <div class="hidden lg:flex items-center space-x-4 text-sm font-medium">
+                <a href="mailto:bipulchnath@gmail.com" class="text-dark hover:text-primary transition">bipulchnath@gmail.com</a>
+                <a href="index.html#contact" class="px-5 py-2.5 bg-dark text-white rounded-full hover:bg-primary transition">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium tracking-wider uppercase text-sm">Technical Showcase</span>
+                <h1 class="text-4xl lg:text-6xl font-bold text-dark mt-4 mb-6 leading-tight">Project Architecture & Details</h1>
+                <p class="text-graytext text-lg max-w-2xl mx-auto">Click on any project card below to expand its technical specifications, including system features, tech stack, and target clients.</p>
+            </div>
+
+            <!-- Projects Accordion Grid -->
+            <div class="space-y-6">
+
+                <!-- 1. bdmeditech.com -->
+                <div id="bdmeditech" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-bdmeditech">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/bdmeditech.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="bdmeditech">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Academic & Research</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">AI-Powered Medical Diagnostic Tools (bdmeditech.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-bdmeditech" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    Architected and developed an advanced diagnostic dashboard to predict chronic diseases like cardiovascular ailments, diabetes, and nephrological disorders using trained artificial intelligence models. It also features a companion cross-platform mobile application for user/patient health log tracking and specialized radiological classifiers to analyze knee arthritis from X-ray imagery.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Python</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">scikit-learn</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Flask</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Flutter</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Dart</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PostgreSQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">IICT, BUET Research Initiatives</p>
+                                </div>
+                                <div>
+                                    <a href="https://bdmeditech.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. bdjobsguru.com -->
+                <div id="bdjobsguru" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-bdjobsguru">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/bdjobsguru.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="bdjobsguru">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Commercial & Portal</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">BDJobsGuru Exam Prep (bdjobsguru.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-bdjobsguru" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    BDJobsGuru is a popular educational testing and preparation portal in Bangladesh. It features comprehensive practice modules, timed examination test environments, score trackers, and job board databases helping candidates prepare for employment assessments and educational admission tests.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">Job Seekers & Admission Candidates</p>
+                                </div>
+                                <div>
+                                    <a href="https://bdjobsguru.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. hscict.org -->
+                <div id="hscict" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-hscict">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/hscict.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="hscict">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">E-Learning & Research</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">HSC ICT Online E-learning (hscict.org)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-hscict" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    Developed as a pioneering platform for Higher Secondary Certificate (HSC) ICT curriculum students in Bangladesh. The key technology achievement is a secure, browser-based sandboxed compiler that allows students to write, compile, and run C code, design HTML documents, and test SQL database commands instantly without requiring any computer configurations or local installations.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">CodeIgniter</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">GCC Compiler Sandbox</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">HSC ICT Students of Bangladesh | BUET R&D</p>
+                                </div>
+                                <div>
+                                    <a href="https://hscict.org/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. dbles.3dotsss.com -->
+                <div id="dbles" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-dbles">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/dbles.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="dbles">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">E-Learning & Research</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">SQL Learning System (dbles.3dotsss.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-dbles" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    The SQL Learning and Evaluation System (SQL-LES) is a robust pedagogical engine that provides database query practice paths, schema visualizers, and automated grading metrics for student SQL answers. The platform has been in continuous deployment for database laboratory evaluations.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">North South University (NSU) Faculty & Students</p>
+                                </div>
+                                <div>
+                                    <a href="https://dbles.3dotsss.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. dwlhub.com -->
+                <div id="dwlhub" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-dwlhub">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/dwlhub.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="dwlhub">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Commercial E-Commerce</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">DWLHub Interior Design Marketplace (dwlhub.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-dwlhub" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    DWLHub is a comprehensive online marketplace in Bangladesh specializing in interior design, home improvement products, construction accessories, smart lock appliances, and modular layout accessories. It features shopping carts, vendor dashboards, and secure credit gateways.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">React.js</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Tailwind CSS</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">Home Improvement Buyers & Interior Vendors</p>
+                                </div>
+                                <div>
+                                    <a href="https://dwlhub.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. timepiecebd.com -->
+                <div id="timepiece" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-timepiece">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/timepiecebd.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="timepiece">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Commercial E-Commerce</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">Timepiece BD Store (timepiecebd.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-timepiece" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    Built an elegant watches web storefront representing various premium brands. It offers customers intuitive product catalogs, filter attributes, luxury image displays, secure shopping carts, and order checkout flows.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Tailwind CSS</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Alpine.js</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">Timepiece BD E-commerce Retail Shop</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.timepiecebd.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. barberschoolbd.com -->
+                <div id="barber" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-barber">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/barberschoolbd.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="barber">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Commercial Portal</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">Barber School Portal (barberschoolbd.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-barber" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    An educational enrollment and program booking site for professional styling courses. Enables barber schools to publish class syllabi, receive trainee applications, manage schedules, and process online reservation deposits.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">Barber School Academy</p>
+                                </div>
+                                <div>
+                                    <a href="https://barberschoolbd.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. vinternship.org -->
+                <div id="vintern" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-vintern">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/vinternship.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="vintern">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Academic & Research</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">Virtual Internship System (vinternship.org)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-vintern" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    Developed as a core framework to evaluate and benchmark undergraduate software development skills inside remote blended learning workflows. The project co-authored research paper was peer-reviewed and published in the IEEE ICCIT conference.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Flutter</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Blockchain concepts</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">IICT BUET Academic Research Teams</p>
+                                </div>
+                                <div>
+                                    <a href="https://vinternship.org/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. gita.bdjobsguru.com -->
+                <div id="gita" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-gita">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/gita.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="gita">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">Religious E-Learning</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">Gita Study Portal (gita.bdjobsguru.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-gita" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    An interactive scriptural study portal enabling users to read, navigate, and analyze Bhagavad Gita translations and shlokas. Features comprehensive search indices and administrator dashboards to moderate scriptural commentaries.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Laravel</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">Tailwind CSS</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">BDJobsGuru Cultural & Spiritual Portal</p>
+                                </div>
+                                <div>
+                                    <a href="https://gita.bdjobsguru.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. ugradc.3dotsss.com -->
+                <div id="ugradc" class="project-card bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <button class="w-full text-left p-8 flex justify-between items-center focus:outline-none toggle-btn" data-target="info-ugradc">
+                        <div class="flex items-center space-x-6">
+                            <img src="imgs/screenshots/ugradc.png" class="w-16 h-16 object-cover rounded-xl border border-gray-100 hidden sm:block" alt="ugradc">
+                            <div>
+                                <span class="text-primary text-xs font-semibold uppercase">E-Learning & Research</span>
+                                <h2 class="text-2xl font-bold text-dark mt-1">Undergraduate C Compiler (ugradc.3dotsss.com)</h2>
+                            </div>
+                        </div>
+                        <span class="text-primary text-3xl font-light transform transition-transform duration-300 icon-indicator">+</span>
+                    </button>
+                    <div id="info-ugradc" class="project-details hidden border-t border-gray-100 bg-gray-50/50 p-8">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="md:col-span-2 space-y-4">
+                                <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs">What It Does</h3>
+                                <p class="text-graytext leading-relaxed">
+                                    An interactive learning environment that provides university-level C programming sandbox systems, compiling and executing C scripts safely in real-time in the browser. It reduces lab configuration setup overheads for freshmen students.
+                                </p>
+                            </div>
+                            <div class="space-y-6">
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-2">Technologies Used</h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">PHP</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">CodeIgniter</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">MySQL</span>
+                                        <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-xs font-medium border border-blue-100">gcc backend compiler</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-dark uppercase tracking-wider text-xs mb-1">Built For</h3>
+                                    <p class="text-graytext text-sm font-medium">IICT BUET Academic Programming Labs</p>
+                                </div>
+                                <div>
+                                    <a href="https://ugradc.3dotsss.com/" target="_blank" class="inline-flex items-center text-primary font-bold text-sm hover:underline">
+                                        Visit Website
+                                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-2xl font-bold text-white tracking-tighter mb-4">
+                BIPUL<span class="text-primary">.</span>
+            </div>
+            <p class="text-gray-400 text-sm max-w-md mx-auto mb-8">Senior Full-Stack Developer & Researcher specializing in AI MedTech and e-learning platforms.</p>
+            <p class="text-gray-500 text-xs">&copy; 2026 Bipul Chandra Dev Nath. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Accordion Script -->
+    <script>
+        $(document).ready(function(){
+            $('.toggle-btn').click(function(){
+                var target = $(this).attr('data-target');
+                var $details = $('#' + target);
+                var $indicator = $(this).find('.icon-indicator');
+                
+                // Toggle active card
+                $details.slideToggle(300);
+                
+                // Toggle indicator sign (+ to -)
+                if ($indicator.text() === '+') {
+                    $indicator.text('−');
+                    $(this).closest('.project-card').addClass('border-primary/20 shadow-md');
+                } else {
+                    $indicator.text('+');
+                    $(this).closest('.project-card').removeClass('border-primary/20 shadow-md');
+                }
+            });
+
+            // If a hash is present in the URL, open it automatically
+            var hash = window.location.hash;
+            if (hash) {
+                var $targetCard = $(hash);
+                if ($targetCard.length) {
+                    // Find the toggle button inside this card and trigger click
+                    $targetCard.find('.toggle-btn').click();
+                    
+                    // Smooth scroll to the target card
+                    $('html, body').animate({
+                        scrollTop: $targetCard.offset().top - 100
+                    }, 500);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

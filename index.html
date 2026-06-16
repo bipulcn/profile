@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipul Chandra Dev Nath - Personal Portfolio | Senior Full-Stack Developer & Researcher</title>
+    <meta name="description" content="Bipul Chandra Dev Nath is a Senior Full-Stack Developer and Researcher at BUET, specializing in AI-driven MedTech, blockchain, and e-learning systems.">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        primary: '#2563eb', // Blue accent
+                        graytext: '#64748b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern hover & active effects for filter buttons */
+        .filter-btn {
+            transition: color 0.2s ease-in-out;
+        }
+        .filter-btn:hover {
+            color: #2563eb;
+        }
+        .filter-btn.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .filter-btn.active::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #2563eb;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans selection:bg-primary selection:text-white">
+
+    <header class="fixed w-full top-0 bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-dark tracking-tighter">
+                BIPUL<span class="text-primary">.</span>
+            </div>
+            <nav class="hidden md:flex space-x-4 text-sm font-medium text-graytext">
+                <a id="nav-home" href="#home" class="hover:text-primary transition">Home</a>
+                <a id="nav-about" href="#about" class="hover:text-primary transition">About</a>
+                <a id="nav-services" href="#services" class="hover:text-primary transition">Expertise</a>
+                <a id="nav-experience" href="#experience" class="hover:text-primary transition">Experience</a>
+                <a id="nav-portfolio" href="#portfolio" class="hover:text-primary transition">Projects</a>
+                <a id="nav-academic" href="#academic" class="hover:text-primary transition">Publications & Education</a>
+                <a id="nav-courses" href="#courses" class="hover:text-primary transition">Courses</a>
+                <a id="nav-contact" href="#contact" class="hover:text-primary transition">Contact</a>
+                <a id="nav-cv" href="cv.html" class="hover:text-primary transition font-semibold text-primary">Resume/CV</a>
+            </nav>
+            <div class="hidden lg:flex items-center space-x-4 text-sm font-medium">
+                <a href="mailto:bipulchnath@gmail.com" class="text-dark hover:text-primary transition">bipulchnath@gmail.com</a>
+                <a href="#contact" class="px-5 py-2.5 bg-dark text-white rounded-full hover:bg-primary transition">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-primary font-semibold mb-2 uppercase tracking-wide text-sm">Senior Full-Stack Developer & Researcher</p>
+                <h1 class="text-5xl lg:text-7xl font-bold text-dark leading-tight mb-6">
+                    Hello, I'm <br/> Bipul Chandra Dev Nath
+                </h1>
+                <p class="text-graytext text-lg leading-relaxed mb-8 max-w-lg">
+                    I have over 15 years of experience architecting, developing, and deploying complex, high-impact applications. Deep hands-on expertise in building scalable e-learning platforms and AI-driven MedTech solutions.
+                </p>
+                <div class="flex flex-wrap items-center gap-6">
+                    <a href="#portfolio" class="px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">
+                        View Projects
+                    </a>
+                    <a href="cv.html" class="px-8 py-4 border border-gray-200 text-dark rounded-full font-medium hover:border-primary hover:text-primary transition flex items-center space-x-2 bg-white">
+                        <span>Download CV</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    </a>
+                    <div class="flex space-x-3">
+                        <a href="https://github.com/bipulcn" target="_blank" class="w-10 h-10 flex justify-center items-center rounded-full border border-gray-200 hover:border-primary hover:text-primary transition text-sm font-semibold" title="GitHub">GH</a>
+                        <a href="https://www.linkedin.com/in/bipul-chandra-dev-nath-2ab66145/" target="_blank" class="w-10 h-10 flex justify-center items-center rounded-full border border-gray-200 hover:border-primary hover:text-primary transition text-sm font-semibold" title="LinkedIn">LN</a>
+                        <a href="https://play.google.com/store/apps/developer?id=Bipul+Chandra+Dev+Nath" target="_blank" class="w-10 h-10 flex justify-center items-center rounded-full border border-gray-200 hover:border-primary hover:text-primary transition text-sm font-semibold" title="Google Play Store">GP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="w-full max-w-md h-[500px] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="imgs/bipul.png" alt="Bipul Chandra Dev Nath" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                </div>
+                <div class="absolute bottom-10 left-0 lg:-left-10 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex items-center space-x-4">
+                    <div class="text-4xl font-bold text-primary">15+</div>
+                    <div class="text-sm text-graytext font-medium leading-tight">Years Of <br> Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl lg:text-5xl font-bold text-dark mb-6 leading-tight">
+                    Bridging the Gap Between AI Research & Software Development
+                </h2>
+                <p class="text-graytext mb-6">
+                    Currently associated with the Institutes of Information and Communication Technology (IICT) at BUET, my research and development focus is on deploying medical artificial intelligence applications, blockchain record systems, and high-availability educational environments.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary font-bold text-xl flex-shrink-0">1</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">BUET Researcher & Developer</h3>
+                            <p class="text-graytext text-sm">Key developer for grant-funded medical diagnostic applications, Radiological AI classifiers, and blockchain linkage software.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary font-bold text-xl flex-shrink-0">2</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-dark mb-2">E-Learning Systems Architect</h3>
+                            <p class="text-graytext text-sm">Architected and deployed interactive programming sandboxes and SQL learning platforms used directly by university faculties.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <a href="#experience" class="inline-flex items-center font-bold text-dark hover:text-primary transition">
+                        View Professional Timeline 
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 shadow-sm">
+                    <h3 class="text-4xl font-bold text-primary mb-2">15+ Yrs</h3>
+                    <p class="text-graytext font-medium">Research & Dev</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl text-center border border-gray-100 shadow-sm">
+                    <h3 class="text-4xl font-bold text-primary mb-2">3+</h3>
+                    <p class="text-graytext font-medium">IEEE Publications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="text-primary font-medium tracking-wider uppercase text-sm">My Expertise</span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-dark mt-4 mb-6">Specialized Technical Competencies</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <h3 class="text-2xl font-bold text-dark mb-4">Full-Stack Dev</h3>
+                    <p class="text-graytext mb-6">Expert-level architecting in PHP (Laravel, CodeIgniter), Python (Django), React (MERN Stack), MySQL and PostgreSQL database architectures.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 95%"></div>
+                    </div>
+                    <div class="mt-2 text-right text-sm font-bold text-dark">95%</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <h3 class="text-2xl font-bold text-dark mb-4">Mobile Apps</h3>
+                    <p class="text-graytext mb-6">End-to-end development of cross-platform Flutter/Dart apps and native iOS products using Objective-C, Cocos2D, and Unity3D.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                    <div class="mt-2 text-right text-sm font-bold text-dark">85%</div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100">
+                    <h3 class="text-2xl font-bold text-dark mb-4">AI & ML Research</h3>
+                    <p class="text-graytext mb-6">Constructing ML classifiers, predictive MedTech diagnostics using Python tools (scikit-learn, TensorFlow, Flask, Pandas, NLP).</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                    <div class="mt-2 text-right text-sm font-bold text-dark">80%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-xl">
+                    <span class="text-primary font-medium tracking-wider uppercase text-sm">Latest Portfolio</span>
+                    <h2 class="text-3xl lg:text-5xl font-bold text-dark mt-4">Transforming R&D into Production Applications</h2>
+                </div>
+                
+                <div class="mt-8 md:mt-0 flex flex-wrap gap-4 text-sm text-graytext cursor-pointer">
+                    <div id="filter-all" class="filter-btn active" data-filter="all">All</div>
+                    <div id="filter-academic" class="filter-btn" data-filter="academic-research">Academic & Research</div>
+                    <div id="filter-elearning" class="filter-btn" data-filter="elearning">E-Learning</div>
+                    <div id="filter-commercial" class="filter-btn" data-filter="commercial">Commercial</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <!-- Project 1: bdmeditech.com -->
+                <div class="portfolio-item academic-research group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/bdmeditech.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="AI MedTech Diagnostics">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Academic & Research | IICT, BUET</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://bdmeditech.com/" target="_blank">AI-Powered Medical Diagnostic Tools (bdmeditech.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#bdmeditech" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://bdmeditech.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: bdjobsguru.com -->
+                <div class="portfolio-item commercial elearning group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/bdjobsguru.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="BDJobsGuru Exam Preparation">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Commercial & Portal | BDJobsGuru</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://bdjobsguru.com/" target="_blank">BDJobsGuru Exam Prep (bdjobsguru.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#bdjobsguru" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://bdjobsguru.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: hscict.org -->
+                <div class="portfolio-item elearning academic-research group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/hscict.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="HSC ICT Online E-learning">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">E-Learning & Research | IICT, BUET</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://hscict.org/" target="_blank">HSC ICT Online E-learning (hscict.org)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#hscict" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://hscict.org/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: dbles.3dotsss.com -->
+                <div class="portfolio-item elearning academic-research group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/dbles.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="dbles SQL Learning System">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">E-Learning & Research | BUET & NSU</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://dbles.3dotsss.com/" target="_blank">SQL Learning System (dbles.3dotsss.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#dbles" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://dbles.3dotsss.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: dwlhub.com -->
+                <div class="portfolio-item commercial group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/dwlhub.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="DWLHub Interior Design Marketplace">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Commercial E-Commerce | DWLHub</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://dwlhub.com/" target="_blank">DWLHub Interior Design Marketplace (dwlhub.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#dwlhub" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://dwlhub.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: timepiecebd.com -->
+                <div class="portfolio-item commercial group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/timepiecebd.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="Timepiece BD Watches Store">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Commercial E-Commerce | Timepiece BD</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://www.timepiecebd.com/" target="_blank">Timepiece BD Store (timepiecebd.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#timepiece" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://www.timepiecebd.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: barberschoolbd.com -->
+                <div class="portfolio-item commercial group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/barberschoolbd.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="Barber School BD">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Commercial Portal | Barber School BD</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://barberschoolbd.com/" target="_blank">Barber School Portal (barberschoolbd.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#barber" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://barberschoolbd.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8: ugradc.3dotsss.com -->
+                <div class="portfolio-item elearning academic-research group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/ugradc.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="Undergrad C Compiler">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">E-Learning & Research | IICT, BUET</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://ugradc.3dotsss.com/" target="_blank">Undergraduate C Compiler (ugradc.3dotsss.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#ugradc" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://ugradc.3dotsss.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9: vinternship.org -->
+                <div class="portfolio-item academic-research group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/vinternship.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="Virtual Internship Platform">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Academic & Research | IICT, BUET</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://vinternship.org/" target="_blank">Virtual Internship System (vinternship.org)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#vintern" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://vinternship.org/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 10: gita.bdjobsguru.com -->
+                <div class="portfolio-item commercial elearning group">
+                    <div class="relative overflow-hidden rounded-2xl mb-6 shadow-sm border border-gray-100">
+                        <img src="imgs/screenshots/gita.png" class="w-full h-[260px] object-cover group-hover:scale-105 transition duration-500" alt="Gita Study Portal">
+                    </div>
+                    <p class="text-primary text-xs font-semibold mb-2 uppercase">Religious E-Learning | BDJobsGuru</p>
+                    <h3 class="text-xl font-bold text-dark hover:text-primary transition mb-4">
+                        <a href="https://gita.bdjobsguru.com/" target="_blank">Gita Study Portal (gita.bdjobsguru.com)</a>
+                    </h3>
+                    <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100">
+                        <a href="projects.html#gita" class="text-primary hover:underline text-xs font-bold">Technical Specs &rarr;</a>
+                        <a href="https://gita.bdjobsguru.com/" target="_blank" class="text-graytext hover:text-primary transition text-xs font-medium inline-flex items-center">
+                            Live Site
+                            <svg class="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="text-primary font-medium tracking-wider uppercase text-sm">My Journey</span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-dark mt-4 mb-6">Professional Experience</h2>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-10">
+                <!-- Job 1 -->
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="md:w-1/3">
+                        <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-bold rounded-full uppercase">2015 - Present</span>
+                        <h3 class="text-xl font-bold text-dark mt-3">Senior Developer & Researcher</h3>
+                        <p class="text-graytext text-sm">IICT, BUET</p>
+                        <p class="text-graytext text-xs italic">Dhaka, Bangladesh</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-graytext mb-4 font-semibold">Core researcher and developer for a BUET-affiliated lab (esrdlab.org), focused on architecting and deploying health AI systems and high-availability e-learning platforms.</p>
+                        <ul class="list-disc list-inside space-y-2 text-graytext text-sm">
+                            <li><strong>AI MedTech Tools (2025):</strong> Built chronic disease diagnostic tools using scikit-learn models, Flutter client integrations, and Flask radiological diagnostic engines.</li>
+                            <li><strong>SQL Learning System (2017-Present):</strong> Managed the second-generation dbles.esrdlab.org platform migration from CodeIgniter to Laravel.</li>
+                            <li><strong>Problem-Based E-Learning (2015-2017):</strong> Created hscict.org, establishing web execution sandboxes for C, HTML, and SQL.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="md:w-1/3">
+                        <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-bold rounded-full uppercase">2013 - 2015</span>
+                        <h3 class="text-xl font-bold text-dark mt-3">Lead Developer</h3>
+                        <p class="text-graytext text-sm">Custom Startup Solutions</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-graytext mb-4 font-semibold">Responsible for end-to-end client systems and startup solutions.</p>
+                        <ul class="list-disc list-inside space-y-2 text-graytext text-sm">
+                            <li>Designed and deployed a commercial Java-based product inventory and management system for medical outlets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="flex flex-col md:flex-row gap-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="md:w-1/3">
+                        <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-bold rounded-full uppercase">2011 - 2013</span>
+                        <h3 class="text-xl font-bold text-dark mt-3">Mobile App Developer</h3>
+                        <p class="text-graytext text-sm">Independent Contract</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-graytext mb-4 font-semibold">Developed mobile applications and digital interactive solutions.</p>
+                        <ul class="list-disc list-inside space-y-2 text-graytext text-sm">
+                            <li>Shipped 10+ iOS applications using Objective-C and Unity3D (C#) game programming.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic & Publications Section -->
+    <section id="academic" class="py-20 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Publications -->
+                <div>
+                    <span class="text-primary font-medium tracking-wider uppercase text-sm">Publications</span>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-dark mt-4 mb-10">Research & Conference Papers</h2>
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <span class="text-xs font-bold text-primary uppercase">IEEE COMPSAC 2024</span>
+                            <h3 class="text-lg font-bold text-dark mt-2 mb-2">BlockPRLS: Blockchain-Based Patient Record Linkage System for Big Data Analytics</h3>
+                            <p class="text-graytext text-sm mb-4">A. S. M. Latiful Hoque, M. R. Mia, M. S. Abdullah, M. J. Islam, B. C. D. Nath, & M. T. Rahman. (2024).</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <span class="text-xs font-bold text-primary uppercase">IEEE ICCIT 2020</span>
+                            <h3 class="text-lg font-bold text-dark mt-2 mb-2">A Conceptual Design of Virtual Internship System to Benchmark Software Development</h3>
+                            <p class="text-graytext text-sm mb-4">R. Mia, A. H. Zahid, B. C. D. Nath, & A. S. M. Latiful Hoque. (2021).</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+                            <span class="text-xs font-bold text-primary uppercase">Computers in Education (Springer)</span>
+                            <h3 class="text-lg font-bold text-dark mt-2 mb-2">E-learning of PHP based on the solutions of real-life problems</h3>
+                            <p class="text-graytext text-sm mb-4">G. M. Muradul Bashir, A. S. M. Latiful Hoque, & B. C. D. Nath. (2016).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <span class="text-primary font-medium tracking-wider uppercase text-sm">Education</span>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-dark mt-4 mb-10">Academic Qualifications</h2>
+                    <div class="relative border-l border-gray-200 ml-4 space-y-8">
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                            <span class="text-xs font-bold text-primary">2015</span>
+                            <h3 class="text-lg font-bold text-dark mt-1">M. Eng. in Information and Communication Technology</h3>
+                            <p class="text-graytext text-sm mt-1">IICT, BUET, Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                            <span class="text-xs font-bold text-primary">2009</span>
+                            <h3 class="text-lg font-bold text-dark mt-1">M. Sc. in Mathematics</h3>
+                            <p class="text-graytext text-sm mt-1">National University, Bangladesh (2nd Class)</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                            <span class="text-xs font-bold text-primary">2006</span>
+                            <h3 class="text-lg font-bold text-dark mt-1">Postgraduate Diploma (PGD) in ICT</h3>
+                            <p class="text-graytext text-sm mt-1">IICT, BUET, Dhaka, Bangladesh</p>
+                        </div>
+                        <div class="relative pl-8">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm"></div>
+                            <span class="text-xs font-bold text-primary">2005</span>
+                            <h3 class="text-lg font-bold text-dark mt-1">B. Sc. in Mathematics</h3>
+                            <p class="text-graytext text-sm mt-1">National University, Bangladesh (2nd Class)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Conducted Section -->
+    <section id="courses" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center mb-16">
+                <span class="text-primary font-medium tracking-wider uppercase text-sm">Instruction & Training</span>
+                <h2 class="text-3xl lg:text-5xl font-bold text-dark mt-4 mb-6">Courses Conducted</h2>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <!-- Course 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div>
+                        <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-bold rounded-full uppercase">3dots E-Learning Portal</span>
+                        <h3 class="text-2xl font-bold text-dark mt-3 mb-2">Problem-Based Computer Programming & Web Development</h3>
+                        <p class="text-graytext text-sm">Conducted as lead instructor. Features interactive online coding compilers allowing students to execute C code, write HTML, and run database queries directly in the browser.</p>
+                        <p class="text-graytext text-xs mt-3"><strong>Associated Lab:</strong> IICT, BUET Research Initiatives</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="https://3dotsss.com/course/view.php?id=14" target="_blank" class="px-6 py-3 bg-primary text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg shadow-blue-500/20 text-sm inline-block">
+                            View Course Portal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Course 2 (Upcoming) -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div>
+                        <div class="flex items-center space-x-2">
+                            <span class="px-3 py-1 bg-blue-100 text-primary text-xs font-bold rounded-full uppercase">Professional Training</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-bold rounded-full uppercase">Upcoming</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mt-3 mb-2">Flutter Application Development for Professionals</h3>
+                        <p class="text-graytext text-sm">An advanced, hands-on professional course focused on state management, clean architecture, REST API integration, and deploying scalable cross-platform mobile apps using Flutter & Dart.</p>
+                        <p class="text-graytext text-xs mt-3"><strong>Target Audience:</strong> Software Engineers & Mobile Developers</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="#contact" class="px-6 py-3 bg-dark text-white rounded-full font-medium hover:bg-primary transition shadow-lg text-sm inline-block">
+                            Enquire Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="bg-dark text-white py-20 mt-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl lg:text-6xl font-bold mb-6">Let's chat! <br/><span class="text-primary">Online</span></h2>
+                <p class="text-gray-400 max-w-md mb-8">Please fill out the form below to get in touch regarding medical R&D systems, university platforms, or full-stack software development projects.</p>
+                <div class="space-y-4">
+                    <p class="text-gray-300"><strong>Email:</strong> bipulchnath@gmail.com</p>
+                    <p class="text-gray-300"><strong>Phone:</strong> +8801675623295</p>
+                    <p class="text-gray-300"><strong>Address:</strong> 144 Ahamed Bag, Basabo, Dhaka, Bangladesh 1214</p>
+                </div>
+            </div>
+            <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+                <form class="space-y-6" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                    <input type="text" id="contact-name" name="name" required placeholder="Your Name" class="w-full bg-transparent border-b border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-primary transition">
+                    <input type="email" id="contact-email" name="email" required placeholder="Email Address" class="w-full bg-transparent border-b border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-primary transition">
+                    <textarea id="contact-message" name="message" required placeholder="Your Message" rows="4" class="w-full bg-transparent border-b border-gray-600 px-0 py-3 text-white focus:outline-none focus:border-primary transition resize-none"></textarea>
+                    <button id="contact-submit" type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-blue-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-20 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            &copy; 2026 Bipul Chandra Dev Nath. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.filter-btn').click(function(){
+                // Remove active class from all buttons and add to the clicked one
+                $('.filter-btn').removeClass('active');
+                $(this).addClass('active');
+                
+                // Get the filter category
+                var filterValue = $(this).attr('data-filter');
+                
+                if(filterValue == 'all') {
+                    // Show all items smoothly with stop() to prevent queue buildup
+                    $('.portfolio-item').stop(true, true).fadeIn(300);
+                } else {
+                    // Hide non-matching items and show matching items smoothly
+                    $('.portfolio-item').not('.' + filterValue).stop(true, true).fadeOut(300);
+                    $('.portfolio-item').filter('.' + filterValue).stop(true, true).fadeIn(300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

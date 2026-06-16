@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Bipul Chandra Dev Nath</title>
+    <meta name="description" content="Professional CV of Bipul Chandra Dev Nath - Senior Full-Stack Developer & Researcher at BUET.">
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#cca43b',
+                        darkgray: '#1a1a1a',
+                        lightbg: '#f7f7f7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Exact Colors for PDF Print */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                border: none !important;
+                width: 100% !important;
+                height: 297mm !important; /* A4 strict height */
+                max-width: 100% !important;
+                display: flex !important;
+                flex-direction: row !important;
+            }
+            .sidebar {
+                width: 33.3333% !important;
+                background-color: #f7f7f7 !important;
+            }
+            .main-content {
+                width: 66.6667% !important;
+                background-color: #ffffff !important;
+            }
+        }
+
+        /* Screen Presentation Styles */
+        @media screen and (min-width: 840px) {
+            body {
+                background-color: #1e293b;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 60px 0;
+                min-height: 100vh;
+            }
+            .cv-container {
+                width: 794px;
+                height: 1122px; /* standard A4 ratio at 96 DPI */
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+                background-color: #ffffff;
+            }
+        }
+
+        @media screen and (max-width: 839px) {
+            .cv-container {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100% !important;
+            }
+            .main-content {
+                width: 100% !important;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        /* Styled scrollbar for layout */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased selection:bg-gold selection:text-white">
+
+    <!-- Screen Navigation Controls (Hidden in Print) -->
+    <div class="no-print fixed top-0 left-0 right-0 bg-slate-900 text-white z-55 flex justify-between items-center px-6 py-3 shadow-md">
+        <div class="flex items-center space-x-2">
+            <span class="text-gold font-bold tracking-wider text-sm">CV EXPORT</span>
+            <span class="text-xs text-slate-400 hidden sm:inline">| Set margins to "None" in Print options for perfect sizing.</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="index.html" class="px-4 py-1.5 bg-slate-800 text-xs font-semibold rounded hover:bg-slate-700 transition">
+                &larr; Portfolio Home
+            </a>
+            <button onclick="window.print()" class="px-5 py-1.5 bg-gold text-darkgray font-bold text-xs rounded hover:bg-[#bfa035] transition shadow-lg shadow-gold/20 flex items-center space-x-1">
+                <span>Print / Save PDF</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- CV Sheet Container -->
+    <div class="cv-container flex overflow-hidden">
+        
+        <!-- SIDEBAR (Left Column, 1/3 Width) -->
+        <div class="sidebar w-1/3 bg-lightbg px-6 py-6 flex flex-col justify-between border-r border-gray-100">
+            <div>
+                <!-- Decorative Profile Photo Wrapper -->
+                <div class="relative w-32 h-32 mx-auto mb-6 flex items-center justify-center">
+                    <!-- Golden arc background supporting the bottom -->
+                    <div class="absolute inset-0 bg-gold rounded-full transform scale-105" style="clip-path: ellipse(65% 65% at 50% 65%);"></div>
+                    <!-- Profile Image -->
+                    <img src="imgs/bipul.png" class="relative w-28 h-28 object-cover rounded-full border-4 border-white shadow z-10" alt="Bipul Chandra Dev Nath">
+                </div>
+
+                <!-- CONTACT_ SECTION -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-1 mb-2">CONTACT_</h3>
+                    <ul class="space-y-1.5 text-[9px] text-gray-600 font-medium">
+                        <li class="flex items-start">
+                            <span class="text-gold font-bold mr-1.5 w-3.5">📍</span>
+                            <span>144 Ahamed Bag, Basabo,<br/>Dhaka, Bangladesh 1214</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-gold font-bold mr-1.5 w-3.5">📞</span>
+                            <span>+8801675623295</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-gold font-bold mr-1.5 w-3.5">✉️</span>
+                            <a href="mailto:bipulchnath@gmail.com" class="hover:text-gold">bipulchnath@gmail.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-gold font-bold mr-1.5 w-3.5">🐙</span>
+                            <a href="https://github.com/bipulcn" target="_blank" class="hover:text-gold">github.com/bipulcn</a>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-gold font-bold mr-1.5 w-3.5">💼</span>
+                            <a href="https://www.linkedin.com/in/bipul-chandra-dev-nath-2ab66145/" target="_blank" class="hover:text-gold">linkedin.com/in/bipulcn</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- EDUCATION_ SECTION -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-1 mb-2">EDUCATION_</h3>
+                    <div class="space-y-2.5">
+                        <div class="text-[9px]">
+                            <p class="font-bold text-darkgray leading-tight">M. Eng. in ICT</p>
+                            <p class="text-gray-500 font-medium leading-tight">IICT, BUET, Dhaka</p>
+                            <p class="text-gold font-semibold text-[8px] mt-0.5">2015</p>
+                        </div>
+                        <div class="text-[9px]">
+                            <p class="font-bold text-darkgray leading-tight">M. Sc. in Mathematics</p>
+                            <p class="text-gray-500 font-medium leading-tight">National University (2nd Class)</p>
+                            <p class="text-gold font-semibold text-[8px] mt-0.5">2009</p>
+                        </div>
+                        <div class="text-[9px]">
+                            <p class="font-bold text-darkgray leading-tight">Postgraduate Diploma in ICT</p>
+                            <p class="text-gray-500 font-medium leading-tight">IICT, BUET, Dhaka</p>
+                            <p class="text-gold font-semibold text-[8px] mt-0.5">2006</p>
+                        </div>
+                        <div class="text-[9px]">
+                            <p class="font-bold text-darkgray leading-tight">B. Sc. in Mathematics</p>
+                            <p class="text-gray-500 font-medium leading-tight">National University (2nd Class)</p>
+                            <p class="text-gold font-semibold text-[8px] mt-0.5">2005</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUBLICATIONS_ SECTION -->
+                <div class="mb-5">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-1 mb-2">PUBLICATIONS_</h3>
+                    <div class="space-y-2.5">
+                        <div class="text-[8px] leading-tight">
+                            <p class="font-bold text-darkgray">IEEE COMPSAC 2024</p>
+                            <p class="text-gray-500 font-medium italic">BlockPRLS: Blockchain Patient Linkage System for Big Data</p>
+                        </div>
+                        <div class="text-[8px] leading-tight">
+                            <p class="font-bold text-darkgray">IEEE ICCIT 2020</p>
+                            <p class="text-gray-500 font-medium italic">Virtual Internship System to Benchmark Software Skills</p>
+                        </div>
+                        <div class="text-[8px] leading-tight">
+                            <p class="font-bold text-darkgray">Computers & Ed (Springer)</p>
+                            <p class="text-gray-500 font-medium italic">E-learning of PHP Based on Real-Life Solutions (2016)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PERSONAL_ SECTION -->
+            <div class="border-t border-gray-200 pt-4">
+                <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-1 mb-2">PERSONAL_</h3>
+                <ul class="space-y-1 text-[9px] text-gray-600 font-medium">
+                    <li><strong>DOB:</strong> 06 Jan 1983</li>
+                    <li><strong>Nationality:</strong> Bangladeshi</li>
+                    <li><strong>Marital Status:</strong> Married</li>
+                    <li><strong>Home District:</strong> Chattogram</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT (Right Column, 2/3 Width) -->
+        <div class="main-content w-2/3 bg-white px-6 py-6 flex flex-col justify-between">
+            <div>
+                <!-- Name & Title Header -->
+                <div class="mb-4">
+                    <h1 class="text-2xl font-extrabold text-darkgray tracking-tighter leading-none">BIPUL CHANDRA DEV NATH</h1>
+                    <h2 class="text-[10px] font-bold text-gold tracking-widest mt-1.5 uppercase">Senior Full-Stack Developer & Researcher</h2>
+                    <div class="w-full h-[1.5px] bg-gold mt-2"></div>
+                </div>
+
+                <!-- PROFILE_ SECTION -->
+                <div class="mb-4">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-0.5 mb-2">PROFILE_</h3>
+                    <p class="text-[9px] text-gray-600 leading-relaxed">
+                        Senior Full-Stack Developer and Researcher with 15+ years of experience architecting, developing, and deploying complex, high-impact applications. Deep hands-on expertise in building scalable e-learning platforms and AI-driven MedTech solutions. Proven ability to lead the full project lifecycle, from initial R&D and concept to deployment and long-term maintenance.
+                    </p>
+                </div>
+
+                <!-- JOB EXPERIENCE_ SECTION -->
+                <div class="mb-4">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-0.5 mb-2">JOB EXPERIENCE_</h3>
+                    <div class="space-y-3">
+                        <!-- Job 1 -->
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-[10px] font-extrabold text-darkgray">Senior Developer & Researcher</h4>
+                                <span class="text-[9px] font-semibold text-gold">2015 - PRESENT</span>
+                            </div>
+                            <p class="text-[9px] text-gray-500 font-bold mb-0.5">Institutes of Information and Communication Technology (IICT), BUET</p>
+                            <ul class="list-disc list-inside text-[8.5px] text-gray-600 space-y-0.5 leading-tight pl-1">
+                                <li>Architected medical diagnostic dashboard using scikit-learn models, Flutter, and Flask for early-stage disease prediction (2025).</li>
+                                <li>Migrated NSU's SQL-LES automated evaluation platform from CodeIgniter to Laravel, maintaining schema evaluations for 4+ years.</li>
+                                <li>Led the development of hscict.org, integrating sandboxed GCC compilers to run database queries and C code securely in-browser.</li>
+                                <li>Developed the BlockPRLS patient record linkage ledger on blockchain for secure data analytics (IEEE COMPSAC).</li>
+                            </ul>
+                        </div>
+                        <!-- Job 2 -->
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-[10px] font-extrabold text-darkgray">Lead Developer</h4>
+                                <span class="text-[9px] font-semibold text-gold">2013 - 2015</span>
+                            </div>
+                            <p class="text-[9px] text-gray-500 font-bold mb-0.5">Custom Startup Solutions, Dhaka</p>
+                            <ul class="list-disc list-inside text-[8.5px] text-gray-600 space-y-0.5 leading-tight pl-1">
+                                <li>Designed and deployed a full Java-based product management application for pharmacy outlets.</li>
+                                <li>Handled deployment, inventory control, and transaction modules active in retail shops for 2+ years.</li>
+                            </ul>
+                        </div>
+                        <!-- Job 3 -->
+                        <div>
+                            <div class="flex justify-between items-baseline">
+                                <h4 class="text-[10px] font-extrabold text-darkgray">Mobile Application Developer</h4>
+                                <span class="text-[9px] font-semibold text-gold">2011 - 2013</span>
+                            </div>
+                            <p class="text-[9px] text-gray-500 font-bold mb-0.5">Freelance / Contract, Dhaka</p>
+                            <ul class="list-disc list-inside text-[8.5px] text-gray-600 space-y-0.5 leading-tight pl-1">
+                                <li>Developed and shipped over 10 native iOS games and applications using Objective-C and Xcode (Cocos2D, Unity3D with C#, and Flash ActionScript).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEY PROJECTS_ SECTION -->
+                <div class="mb-4">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-0.5 mb-2">KEY PROJECTS_</h3>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-[8.5px] text-gray-600 leading-tight">
+                        <div>
+                            <p class="font-extrabold text-darkgray">MedTech App (Laravel)</p>
+                            <p class="text-gray-500 font-medium">Track medication-taking habits & check medicine details. (Rebuilt from Django)</p>
+                        </div>
+                        <div>
+                            <p class="font-extrabold text-darkgray">Mess Management (MERN)</p>
+                            <p class="text-gray-500 font-medium">Full-stack MongoDB, Express, React, Node application for mass/mess utilities.</p>
+                        </div>
+                        <div>
+                            <p class="font-extrabold text-darkgray">Mobile Apps Portfolio (Flutter & iOS)</p>
+                            <p class="text-gray-500 font-medium">TicTacToe (Google Play); Kids Origami, Birds Adventure (Legacy iOS, Cocos2D).</p>
+                        </div>
+                        <div>
+                            <p class="font-extrabold text-darkgray">BDJobsGuru (Laravel)</p>
+                            <p class="text-gray-500 font-medium font-medium">E-learning examination test platform for job candidates & admissions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKILLS_ SECTION -->
+                <div class="mb-4">
+                    <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-0.5 mb-2">SKILLS_</h3>
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-1.5">
+                        <!-- Skill 1 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">PHP & Laravel Ecosystem</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">Python, Flask & AI Models</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-200"></span>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">Flutter & Cross-Platform Mobile</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-200"></span>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">Databases (MySQL, PostgreSQL)</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            </div>
+                        </div>
+                        <!-- Skill 5 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">JavaScript & React (MERN)</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gray-200"></span>
+                            </div>
+                        </div>
+                        <!-- Skill 6 -->
+                        <div class="flex items-center justify-between text-[9px]">
+                            <span class="font-semibold text-gray-700">System Architecture & Git</span>
+                            <div class="flex space-x-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERESTS_ SECTION -->
+            <div>
+                <h3 class="text-xs font-extrabold text-darkgray tracking-wider border-b-2 border-gold pb-0.5 mb-2">INTERESTS_</h3>
+                <div class="flex flex-wrap gap-1.5 text-[8px] font-bold text-gray-600 uppercase">
+                    <span class="px-2 py-0.5 bg-gray-100 rounded-full">Medical AI & Deep Learning</span>
+                    <span class="px-2 py-0.5 bg-gray-100 rounded-full">Browser Code Compilers</span>
+                    <span class="px-2 py-0.5 bg-gray-100 rounded-full">Mobile Game R&D</span>
+                    <span class="px-2 py-0.5 bg-gray-100 rounded-full">Numerical Systems</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
